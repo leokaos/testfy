@@ -9,12 +9,12 @@ repositories {
 }
 
 dependencies {
-    implementation 'io.quarkus:quarkus-elasticsearch-rest-client'
+    implementation 'io.quarkus:quarkus-elasticsearch-rest-client:2.15.1.Final'
     implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
-    implementation 'io.quarkus:quarkus-arc'
-    implementation 'io.quarkus:quarkus-resteasy-reactive'
-    testImplementation 'io.quarkus:quarkus-junit5'
-    testImplementation 'io.rest-assured:rest-assured'
+    implementation 'io.quarkus:quarkus-arc:2.15.1.Final'
+    implementation 'io.quarkus:quarkus-resteasy-reactive:2.15.1.Final'
+    testImplementation 'io.quarkus:quarkus-junit5:2.15.1.Final'
+    testImplementation 'io.rest-assured:rest-assured:5.3.0'
 }
 
 group 'org.leo'

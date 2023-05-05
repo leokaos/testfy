@@ -1,13 +1,26 @@
-<div class="app-container">
+<div class="layout-wrapper">
 
+    <!--TOP BAR-->
     <div class="layout-topbar">
-
         <a class="layout-topbar-logo" routerLink="">
-            <img src="assets/logos/png/logo-no-background.png " alt="logo">
+            <img src="assets/logos/svg/logo-no-background.svg" alt="logo">
         </a>
-
+        <div class="layout-topbar-menu">
+            <p-dropdown [options]="cities" [(ngModel)]="value" placeholder="Project" optionLabel="name" [showClear]="true"></p-dropdown>
+            <p-button icon="pi pi-user"></p-button>
+        </div>
     </div>
 
-    <router-outlet></router-outlet>
+    <!--SIDE MENU BAR-->
+    <div class="layout-sidebar">
+        <p-panelMenu [model]="items"></p-panelMenu>
+    </div>
+
+    <!--CONTENT-->
+    <div class="layout-main-container">
+        <div class="layout-main">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
 
 </div>
